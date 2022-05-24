@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SignInComponent } from './moduls/login-module/sign-in/sign-in.component';
+
 import { EntryComponent } from './moduls/login-module/entry/entry.component';
 import { DailyComponent } from './moduls/calendar-module/daily/daily.component';
 import { WeeklyComponent } from './moduls/calendar-module/weekly/weekly.component';
@@ -11,11 +11,13 @@ import { AddTaskComponent } from './moduls/task-module/add-task/add-task.compone
 import { UpdateTaskComponent } from './moduls/task-module/update-task/update-task.component';
 import { DeleteTaskComponent } from './moduls/task-module/delete-task/delete-task.component';
 import { DisplayTaskComponent } from './moduls/task-module/display-task/display-task.component';
+import { LoginModuleModule } from './moduls/login-module/login-module.module';
+import { TaskModuleModule } from './moduls/task-module/task-module.module';
+import { CalendarModuleModule } from './moduls/calendar-module/calendar-module.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignInComponent,
     EntryComponent,
     DailyComponent,
     WeeklyComponent,
@@ -26,7 +28,10 @@ import { DisplayTaskComponent } from './moduls/task-module/display-task/display-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LoginModuleModule,
+    TaskModuleModule,
+    CalendarModuleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
