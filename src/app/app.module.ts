@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { EntryComponent } from './moduls/login-module/entry/entry.component';
 import { DailyComponent } from './moduls/calendar-module/daily/daily.component';
 import { WeeklyComponent } from './moduls/calendar-module/weekly/weekly.component';
@@ -14,7 +12,8 @@ import { DisplayTaskComponent } from './moduls/task-module/display-task/display-
 import { LoginModuleModule } from './moduls/login-module/login-module.module';
 import { TaskModuleModule } from './moduls/task-module/task-module.module';
 import { CalendarModuleModule } from './moduls/calendar-module/calendar-module.module';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './moduls/material/material.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,11 +26,13 @@ import { CalendarModuleModule } from './moduls/calendar-module/calendar-module.m
     DisplayTaskComponent
   ],
   imports: [
+    MaterialModule,
     BrowserModule,
     AppRoutingModule,
     LoginModuleModule,
     TaskModuleModule,
-    CalendarModuleModule
+    CalendarModuleModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

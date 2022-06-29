@@ -1,8 +1,20 @@
 
 
 <style>
-
+#tryInput{
+    border-radius: 5px;
+    border-color: white;
+}
+#tryInput:focus-visible{
+    border-color: white;
+    border-width: 0px;
+}
 </style>
-
+<!-- <button mat-raised-button>my button</button>
+<button mat-raised-button><input id="tryInput" type="text" matInput></button>
+<input type="text" matInput>
+<input type="text" matNativeControl>
+<input type="text" matPrefix>
+<input type="text" matSuffix> -->
 <app-sign-in></app-sign-in>
 <router-outlet></router-outlet>

@@ -1,0 +1,25 @@
+input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width:auto+10px;
+    border: none;
+}
+input:focus{
+    // border:none;
+}
+button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width:80px;
+}
+div form{
+    width: 25vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+    // justify-content: center;
+    
+// display: flex;
+// flex-direction: column;
+// justify-self: center;
+}
