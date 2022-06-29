@@ -15,6 +15,7 @@ export class loginService implements OnInit {
         //האם שם המשתמש קיים
         //האם הסיסמא זהות 
         //האם הסיסמאות לא קיימות
+        //something
         return false;
     }
     isExist(userName: string) {
