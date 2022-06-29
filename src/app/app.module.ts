@@ -14,6 +14,7 @@ import { TaskModuleModule } from './moduls/task-module/task-module.module';
 import { CalendarModuleModule } from './moduls/calendar-module/calendar-module.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './moduls/material/material.module';
+import { WelcomeComponent } from './moduls/login-module/welcome/welcome.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { MaterialModule } from './moduls/material/material.module';
     AddTaskComponent,
     UpdateTaskComponent,
     DeleteTaskComponent,
-    DisplayTaskComponent
+    DisplayTaskComponent,
+    WelcomeComponent
   ],
   imports: [
     MaterialModule,

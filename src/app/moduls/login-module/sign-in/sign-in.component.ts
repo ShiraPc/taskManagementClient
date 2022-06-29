@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormControlName, FormGroup } from '@angular/forms';
+import { loginService } from '../login.service';
 
 
 @Component({
@@ -10,12 +11,25 @@ import { FormControl, FormControlName, FormGroup } from '@angular/forms';
 export class SignInComponent implements OnInit {
   loginForm!: FormGroup;
   
-  constructor() {
+  constructor(private _login:loginService) {
 
    }
  
   signIn(){
-      console.log(event?.target);
+    if(!      this._login.checkValidity(
+        this.loginForm.value['userName'],
+        this.loginForm.value['password'],
+        this.loginForm.value['repeatPassword']))
+        {
+          alert('user name or password are unvalid')
+          //TODO
+          //empty the inputs
+        }
+        else{
+          
+          alert('user added succesfully')
+        }
+
   }
   sign(){
 

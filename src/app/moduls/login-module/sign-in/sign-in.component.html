@@ -1,11 +1,14 @@
 <div>
-<form [formGroup]="loginForm">
+<form [formGroup]="loginForm"  (submit)="signIn()" >
 <p>hello new user</p>
-<button mat-raised-button ><input type="text" placeholder="name" formControlName="userName"></button>
+<!-- <button mat-raised-button ><input type="text" placeholder="name" formControlName="userName"></button> -->
+    <input type="text" placeholder="user name" formControlName="userName">
+    <input type="text" placeholder="password" formControlName="password">
+    <input type="text" placeholder="repeat password" formControlName="repeatPassword">
     
-    <input type="password" placeholder="password" formControlName="password">
-    <input type="password" placeholder="repit password" formControlName="repeatPassword">
-    <button (click)="sign()" type="submit" mat-raised-button >save</button>
+    <!-- <input type="password" placeholder="password" formControlName="password">
+    <input type="password" placeholder="repit password" formControlName="repeatPassword"> -->
+    <button type="submit" mat-raised-button >save</button>
 </form>
 </div>
 
